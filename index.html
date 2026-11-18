@@ -6,16 +6,17 @@
         <p id="display"></p>
 
         <script>
-            // display cookie
-            if(document.cookie == ""){
-                document.getElementById("display").innerHTML = "Cookie not found.";
+            // set and display cookie
+            if(document.cookie == "") {
+                var val = prompt("Enter a value for the cookie");
+
+                document.cookie = "username=" + val + "; max-age=86400; path=/";
+                document.getElementById("display").innerHTML = "Cookie value saved.";
             }
             else {
                 document.getElementById("display").innerHTML = "document.cookie: " + document.cookie;
             }
 
-            // set cookie
-            document.cookie = "username=Jared; max-age=86400; path=/";
         </script>
     <footer>&copy; Dillon Benik, 11/17/2026</footer>
     </body>
